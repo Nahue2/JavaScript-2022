@@ -119,10 +119,11 @@ function mostrarListaCompleta (alumnos,estudiante)
 
 let estudiante = document.getElementById("listaDeAlumnado")
 
-let boton = document.getElementById('boton');
+let boton1 = document.getElementById('boton');
+let boton2 = document.getElementById('boton1');
+let boton3 = document.getElementById('boton3');
 
 const respuesta = () => {
-    //ingresoNuevoAlumno(alumnos);
     localStorage.setItem(ingresoNuevoAlumno(alumnos));
 };
 
@@ -130,6 +131,13 @@ const mostrarLista = () =>{
     mostrarListaCompleta (alumnos,estudiante);
 };
 
-boton.addEventListener("click",respuesta);
+const buscadorAlumno = () =>{
+   // let apellidoAlumno = prompt("Ingrese el apellido a buscar");
+    filtradoPorNota(alumnos);
+}
 
-boton.addEventListener("click",mostrarLista);
+boton1.addEventListener("click",respuesta);
+
+boton2.addEventListener("click",mostrarLista);
+
+boton3.addEventListener("click",buscadorAlumno);
